@@ -1,0 +1,43 @@
+{
+  "name": "Agora",
+  "version": "0.0.1",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon server.js",
+    "test-server": "PORT=8778 DB=AgoraTest node server.js",
+    "start-https": "CERT=config/https/localhost.crt KEY=config/https/localhost.key nodemon server.js",
+    "test-prod": "NODE_ENV=production CERT=/etc/letsencrypt/live/e-oj.com/fullchain.pem KEY=/etc/letsencrypt/live/e-oj.com/privkey.pem nodemon server.js",
+    "start-prod": "NODE_ENV=production CERT=/etc/letsencrypt/live/e-oj.com/fullchain.pem KEY=/etc/letsencrypt/live/e-oj.com/privkey.pem forever start server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cors": "^2.8.5",
+    "eslint-plugin-html": "^5.0.0",
+    "express": "^4.16.4",
+    "express-favicon": "^2.0.1",
+    "fawn": "^2.1.5",
+    "ffmpeg-static": "^2.4.0",
+    "ffprobe-static": "^3.0.0",
+    "file-type": "^10.7.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "helmet": "^3.15.0",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.20",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "multer-gridfs-storage": "^3.2.3",
+    "read-chunk": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "dotenv": "^6.2.0",
+    "eslint": "^5.11.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "mocha": "^5.2.0"
+  }
+}
